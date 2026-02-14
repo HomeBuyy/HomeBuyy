@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Cadastro | HomeBuyy</title>
+  <link rel="stylesheet" href="../css/cadastro.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <link rel="stylesheet" href="../css/menu.css">
+  <script src="../js/validar.js" defer></script>
+  <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="hd">
+    <div class="bx">
+      <a href="../index.html" class="lg">
+        <img src="../imgs/logo.jpeg" alt="Logo">
+        <span>HomeBuyy</span>
+      </a>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nv" id="nav-menu">
+        <a href="../index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+        <a href="pedido.html">Solicitar Serviço</a>
+        <a href="cadastro.html" class="bt-login">Cadastro</a>
+        <a href="login.html" class="bt-login">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="ct">
+    <h1>Criar Conta</h1>
+    <form class="form" action="#" method="post" onsubmit="return enviarCadastro()">
+      <label for="nome">Nome Completo:</label>
+      <input type="text" id="nome" name="nome" required>
+
+      <label for="email">E-mail:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="senha">Senha:</label>
+      <input type="password" id="senha" name="senha" required>
+
+      <button type="submit" class="bt">Cadastrar</button>
+    </form>
+
+    <p class="login-link">Já tem conta? <a href="../html/login.html">Faça login</a></p>
+  </main>
+
+</body>
+
+</html>

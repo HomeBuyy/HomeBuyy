@@ -1,0 +1,167 @@
+.sobre {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  background: #111;
+}
+
+.sobre-fundo {
+  flex: 1;
+  background-image: url('../imgs/backgroungImg1.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.sobre-conteudo {
+  flex: 1;
+  background-color: #121212;
+  padding: 4rem 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: #ccc;
+}
+
+.sobre h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  background: linear-gradient(90deg, #00f0ff, #ff00ff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: 300;
+}
+
+.logo-texto {
+  margin-bottom: 1.5rem;
+}
+
+.sobre h2 {
+  color: #ffffff;
+  font-size: 2rem;
+  font-family: "Press Start 2P", system-ui;
+  font-weight: 400;
+  margin: 0;
+}
+
+.span-logo-sobre {
+  font-size: 2rem;
+  font-weight: 400;
+  color: #fff;
+  font-family: "Press Start 2P", system-ui;
+}
+
+.sobre p {
+  font-size: 0.95rem;
+  margin: 1rem 0;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+.texto {
+  margin: 1.5rem 0;
+}
+
+.texto p {
+  margin: 0.75rem 0;
+  font-size: 0.95rem;
+}
+
+.bt-page {
+  margin-top: 2rem;
+  display: inline-block;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #18bdc9, #1cb9c4);
+  color: #000;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.9rem;
+  letter-spacing: 0.05rem;
+}
+
+.bt-page:hover {
+  background: linear-gradient(135deg, #084549, #0d6268);
+  color: #fff;
+}
+
+/* Responsividade */
+@media (max-width: 900px) {
+  .sobre {
+    flex-direction: column;
+  }
+
+  .sobre-fundo {
+    height: 250px;
+    flex: none;
+  }
+
+  .sobre-conteudo {
+    padding: 2rem;
+  }
+
+  .sobre h1 {
+    font-size: 1.8rem;
+  }
+
+  .sobre h2 {
+    font-size: 1.5rem;
+  }
+
+  .span-logo-sobre {
+    font-size: 1.5rem;
+  }
+
+  .sobre p {
+    font-size: 0.9rem;
+  }
+
+  .bt-page {
+    width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .menu-toggle {
+    display: block;
+  }
+
+  .nv {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #222;
+    padding: 20px;
+    padding-right: 1rem;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.5);
+    z-index: 999;
+  }
+
+  .nv.active {
+    display: flex;
+  }
+
+  .nv a {
+    margin: 10px 0;
+    margin-left: 0;
+    text-align: center;
+    width: 100%;
+  }
+
+  .bt-login {
+    margin-left: 0;
+    justify-content: center;
+  }
+}
+
+main {
+  margin-top: 50px;
+}

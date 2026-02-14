@@ -1,0 +1,131 @@
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #0d0d0d;
+      color: #fff;
+    }
+
+/* Seções de serviços em vez de cards lado a lado */
+.servico {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: linear-gradient(135deg,#000000,#1a1a1a) ;
+  margin: 40px auto;
+  max-width: 1000px;
+  padding: 40px 24px;
+  border-radius: 16px;
+  gap: 32px;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+  flex-wrap: wrap;
+}
+
+.servico img {
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+}
+
+.servico-conteudo {
+  flex: 1;
+  color: #fff;
+}
+
+.servico h2 {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.servico p {
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.servico h3 {
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.servico ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 16px;
+}
+
+.servico ul li {
+  margin-bottom: 8px;
+  font-weight: 600;
+  position: relative;
+  padding-left: 22px;
+}
+
+.servico ul li::before {
+  content: "✓";
+  color: #00ff94;
+  position: absolute;
+  left: 0;
+  font-weight: 900;
+}
+
+.plano {
+  font-weight: 700;
+  font-size: 0.9rem;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 6px 14px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+  display: inline-block;
+  color: #00ff94;
+}
+
+.servico button {
+  background-color: #00ff94;
+  border: none;
+  color: #111;
+  font-weight: 700;
+  padding: 10px 24px;
+  border-radius: 24px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.servico button:hover {
+  background-color: #00cc75;
+}
+
+/* Variações de cor */
+.servico-amarelo {
+  background: linear-gradient(135deg,#000000,#1a1a1a);
+  color: #111;
+}
+
+.servico-amarelo .plano {
+  color: #b36e00;
+}
+
+.servico-amarelo ul li::before {
+  color: #ff8800;
+}
+
+.servico-verde {
+  background: linear-gradient(135deg,#000000,#1a1a1a);
+}
+
+.servico-roxo {
+  background: linear-gradient(135deg,#000000,#1a1a1a);
+}
+
+/* Responsivo */
+@media screen and (max-width: 768px) {
+  .servico {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .servico img {
+    width: 160px;
+  }
+}

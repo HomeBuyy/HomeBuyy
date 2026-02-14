@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Solicitar Serviço | HomeBuyy</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../css/style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="../css/pedido.css">
+  <link rel="stylesheet" href="../css/cadastro.css">
+  <link rel="stylesheet" href="../css/menu.css">
+  <script src="../js/script.js" defer></script>
+</head>
+
+<body>
+
+  <header class="hd">
+    <div class="bx">
+      <a href="../index.html" class="lg">
+        <img src="../imgs/logo.jpeg" alt="Logo">
+        <span>HomeBuyy</span>
+      </a>
+      <div class="menu-toggle" id="mobile-menu">
+        <i class="fas fa-bars"></i>
+      </div>
+      <nav class="nv" id="nav-menu">
+        <a href="../index.html">Início</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
+        <a href="pedido.html">Solicitar Serviço</a>
+        <a href="cadastro.html" class="bt-login">Cadastro</a>
+        <a href="login.html" class="bt-login">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="form-section">
+    <h2>Solicite seu Serviço</h2>
+
+    <form id="serviceForm" method="post" action="#">
+      <div class="form-group">
+        <label for="empresa">Nome da Empresa</label>
+        <input type="text" id="empresa" name="empresa" required placeholder="Ex: Loja XPTO">
+      </div>
+
+      <div class="form-group">
+        <label for="contato">Contato (E-mail ou WhatsApp)</label>
+        <input type="text" id="contato" name="contato" required placeholder="contato@email.com">
+      </div>
+
+      <div class="form-group">
+        <label>Escolha o tipo de serviço:</label>
+        <div class="service-options">
+          <div class="option" data-value="site"><i class="fas fa-globe"></i><br>Site único</div>
+          <div class="option" data-value="redes"><i class="fab fa-instagram"></i><br>Redes Sociais</div>
+          <div class="option" data-value="completo"><i class="fas fa-layer-group"></i><br>Site + Redes</div>
+          <div class="option" data-value="manutencao"><i class="fas fa-wrench"></i><br>Site + Suporte + Redes</div>
+        </div>
+        <input type="hidden" name="tipo" id="tipo" required>
+      </div>
+
+      <!-- Campos específicos para site -->
+      <div class="form-group site-fields hidden">
+        <h3>Especificações do Site</h3>
+
+        <label for="site-objetivo">Objetivo do Site</label>
+        <input type="text" id="site-objetivo" name="site-objetivo"
+          placeholder="Ex: Loja virtual, site institucional, blog...">
+
+        <label for="site-referencias">Sites de Referência</label>
+        <input type="text" id="site-referencias" name="site-referencias" placeholder="Links de sites que você gosta">
+
+        <label for="site-cores">Cores Preferidas</label>
+        <input type="text" id="site-cores" name="site-cores" placeholder="Ex: azul, verde, cores da sua marca">
+
+        <label for="site-paginas">Páginas Necessárias</label>
+        <textarea id="site-paginas" name="site-paginas" rows="3"
+          placeholder="Ex: Home, Sobre, Produtos, Contato..."></textarea>
+
+        <label for="site-funcionalidades">Funcionalidades Especiais</label>
+        <textarea id="site-funcionalidades" name="site-funcionalidades" rows="3"
+          placeholder="Ex: Formulário de contato, carrinho de compras, área de membros..."></textarea>
+      </div>
+
+      <!-- Campos especificos para redes sociais -->
+      <div class="form-group social-fields hidden">
+        <h3>Especificações das Redes Sociais</h3>
+
+        <label>Redes Sociais Desejadas</label>
+        <div class="social-checkboxes">
+          <div class="checkbox-item">
+            <input type="checkbox" id="instagram" name="social-redes[]" value="instagram">
+            <label for="instagram">Instagram</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="facebook" name="social-redes[]" value="facebook">
+            <label for="facebook">Facebook</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="tiktok" name="social-redes[]" value="tiktok">
+            <label for="tiktok">TikTok</label>
+          </div>
+          <div class="checkbox-item">
+            <input type="checkbox" id="linkedin" name="social-redes[]" value="linkedin">
+            <label for="linkedin">LinkedIn</label>
+          </div>
+        </div>
+        <label for="outras-redes">Outras Redes Sociais</label>
+        <input type="text" id="outras-redes" name="outras-redes" placeholder="Ex: Pinterest, YouTube, etc">
+
+        <label for="social-objetivo">Objetivo nas Redes</label>
+        <input type="text" id="social-objetivo" name="social-objetivo"
+          placeholder="Ex: Aumentar vendas, ganhar seguidores...">
+
+        <label for="social-publico">Público-Alvo</label>
+        <input type="text" id="social-publico" name="social-publico"
+          placeholder="Ex: Jovens de 18-25 anos interessados em moda">
+
+        <label for="social-posts">Frequência de Posts Desejada</label>
+        <select id="social-posts" name="social-posts">
+          <option value="1">1x por dia</option>
+          <option value="3">3x por semana</option>
+          <option value="5">5x por semana</option>
+        </select>
+
+        <label for="social-tipo">Tipo de Conteúdo Preferido</label>
+        <textarea id="social-tipo" name="social-tipo" rows="3"
+          placeholder="Ex: Fotos de produtos, vídeos informativos, reels..."></textarea>
+      </div>
+
+      <!-- Observações gerais -->
+      <div class="form-group">
+        <label for="observacoes">Observações Adicionais</label>
+        <textarea id="observacoes" name="observacoes" rows="4"
+          placeholder="Outras informações importantes que queira compartilhar..."></textarea>
+      </div>
+
+      <div class="cards-wrapper">
+        <div class="card-grid-space">
+          <h2>Diferentes tipos de serviços</h2>
+          <div class="num"></div>
+          <a class="card" style="background-image: url('./imgs/site.jpg');" href="#">
+            <div>
+              <h1>Site Único</h1>
+              <p>Site profissional com design moderno e responsivo</p>
+              <div class="price">R$ 400</div>
+              <div class="features">
+                ✓ Design personalizado<br>
+                ✓ Otimizado para SEO<br>
+                ✓ Hospedagem incluída
+              </div>
+              <div class="date">Pagamento Único</div>
+              <div class="tags">
+                <div class="tag">Contratar Agora</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-grid-space">
+          <div class="num"></div>
+          <a class="card" style="background-image: url('./imgs/redeSocial.jpg');" href="#">
+            <div>
+              <h1>Redes Sociais</h1>
+              <p>Gestão completa das suas redes sociais</p>
+              <div class="price">R$ 300/mês</div>
+              <div class="features">
+                (+50 por story)
+                ✓ Posts diários<br>
+                ✓ Design personalizado<br>
+                ✓ Relatório mensal
+              </div>
+              <div class="date">Plano Mensal</div>
+              <div class="tags">
+                <div class="tag">Contratar Agora</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-grid-space">
+          <div class="num"></div>
+          <a class="card" style="background-image: url('./imgs/fotoIA.png');" href="#">
+            <div>
+              <h1>Sistema de automação</h1>
+              <br>
+              <p class="p">Automação completa para sua empresa, feito a partir de IA</p>
+
+              <div class="price">R$ 600/mês</div>
+              <div class="features">
+                ✓Redução de erros humanos<br>
+                ✓Economia de tempo e custos<br>
+                ✓Atendimento mais rápido e eficiente ao cliente<br>
+                ✓Segurança de dados e backups automáticos<br>
+
+              </div>
+              <div class="date">Plano Mensal</div>
+              <div class="tags">
+                <div class="tag">Contratar Agora</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-grid-space">
+          <div class="num"></div>
+          <a class="card" style="background-image: url('./imgs/site1.jpg');" href="#">
+            <div>
+              <h1 style="padding-top: 30px;">Completo</h1>
+              <p>Site + Gestão de Redes Sociais</p>
+              <div class="price">R$ 700</div>
+              <div class="features">
+
+                <p style="margin-bottom: 0px;">(Pós compra 250 por mês apenas)</p>
+                ✓ Site completo<br>
+                ✓ Gestão de redes<br>
+                ✓ Suporte prioritário
+              </div>
+              <div class="date">Plano Mensal</div>
+              <div class="tags">
+                <div class="tag">Contratar Agora</div>
+              </div>
+            </div>
+          </a>
+        </div>
+
+        <div class="card-grid-space">
+          <div class="num"></div>
+          <a class="card" style="background-image: url('./imgs/site3.jpg');" href="#">
+            <div>
+              <h1>Premium</h1>
+              <p>Solução completa para seu negócio</p>
+              <div class="price">R$ 1000</div>
+              <div class="features">
+                ✓ Site premium<br>
+                ✓ Marketing completo<br>
+                ✓ Suporte 24/7<br>
+                ✓ Automação de processos
+              </div>
+              <div class="date">Plano Premium</div>
+              <div class="tags">
+                <div class="tag">Contratar Agora</div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+
+      <button type="submit" class="bt">Enviar Pedido</button>
+    </form>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-bx">
+      <img src="../imgs/logo.jpeg" alt="HomeBuyy" class="footer-logo">
+      <p>&copy; 2025 - HomeBuyy</p>
+    </div>
+  </footer>
+
+
+  <script src="../js/pedido.js"></script>
+</body>
+
+</html>
